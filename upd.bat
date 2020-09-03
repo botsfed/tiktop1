@@ -1,2 +1,2 @@
 ﻿"c:\program files\winrar\winrar.exe"
-"c:\program files\winrar\winrar.exe" e trash\mainVer.zip 
+"c:\program files\winrar\winrar.exe" x trash\mainVer.zip 
