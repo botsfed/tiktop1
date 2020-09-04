@@ -34,6 +34,9 @@ sr60()
 	  while ( ErrorLevel != 0 ) {
 	    ImageSearch, FoundX, FoundY, 0,0, 1920, 1080, img\x.png
 		if ( ErrorLevel == 1 ) {
+		  ImageSearch, FoundX, FoundY, 0,0, 1920, 1080, img\x.png
+		}
+		if ( ErrorLevel == 1 ) {
 		  ImageSearch, FoundX, FoundY, 0,0, 1920, 1080, img\0CW.png
 		  If ( ErrorLevel == 0 ) {
 		    cheker = 0
