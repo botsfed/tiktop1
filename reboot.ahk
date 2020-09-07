@@ -258,7 +258,7 @@ ErrorLevel = 1
 	  Send {PgUp}
 	  Sleep, 1000
       Run, bot.ahk
-	  Sleep, 1500
+	  Sleep, 2000
 SendInput {f1}
 exitapp
 
