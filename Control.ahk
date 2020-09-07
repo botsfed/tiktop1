@@ -77,6 +77,7 @@ cheker = 0
 		}		
 		if ( chekMail == 3 ) {
 		  chekMail = 0
+		  SendInput {f15}
 		  info()
 		}
 	  }
