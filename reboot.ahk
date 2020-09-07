@@ -260,6 +260,7 @@ ErrorLevel = 1
       Run, bot.ahk
 	  Sleep, 1500
 SendInput {f1}
+exitapp
 
 f2::
 {

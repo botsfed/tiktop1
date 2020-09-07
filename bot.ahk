@@ -266,7 +266,7 @@ ErrorLevel = 1
 			Run, www.tiktok.com/logout?redirect_url=https`%3A`%2F`%2Fwww.tiktok.com`%2F`%40%Blood%&lang=ru
 		  }
 		  FileDelete, data\accUse.txt
-	      FileAppend, %accN% - 1, data\accUse.txt
+	      FileAppend, %accN%, data\accUse.txt
 		  Sleep, 2000
 		  Run, www.twitter.com/messages
 	  ErrorLevel = 1
