@@ -68,9 +68,13 @@ cheker = 0
 	  if ( cheker == 80 ) {
 	    chekMail++
 	    cheker = 0
-	    Send {PgUp}
-		SendInput {f5}
-		Sleep, 1000
+		if ( chekMail == 1 ) {
+		  Send {PgUp}
+		  SendInput {f5}
+		}
+        if ( chekMail == 2 ) {
+		  Run, reboot.ahk
+		}		
 		if ( chekMail == 3 ) {
 		  chekMail = 0
 		  info()
