@@ -409,7 +409,7 @@ ErrorLevel = 1
 		}
 	    ImageSearch, FoundX, FoundY, 0,0, 1920, 1080, img\likeBut.png
 		if ( ErrorLevel == 1 ) {
-		  ImageSearch, FoundX, FoundY, 0,0, 1920, 1080, img\likeBut2.png
+		  ImageSearch, FoundX, FoundY, 0,0, 1920, 1080, img\likeBut22.png
 		}
 		if ( ErrorLevel == 0 ) {
 		  checkBad = 0
