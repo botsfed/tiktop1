@@ -73,6 +73,8 @@ cheker = 0
 		  SendInput {f5}
 		}
         if ( chekMail == 2 ) {
+		  SendInput {f15}
+		  Sleep, 1500
 		  Run, reboot.ahk
 		}		
 		if ( chekMail == 3 ) {
