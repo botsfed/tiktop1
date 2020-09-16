@@ -1,10 +1,12 @@
-﻿FileReadLine, Green, data\infoLogin.txt, 1
+﻿DetectHiddenWindows, On
+FileReadLine, Green, data\infoLogin.txt, 1
 FileReadLine, Orange, data\infoLogin.txt, 2
 FileReadLine, Red, data\infoLogin.txt, 3
 FileReadLine, Yellow, data\infoLogin.txt, 4
 FileReadLine, Blood, data\infoLogin.txt, 5
 FileReadLine, accN, data\accUse.txt, 1
-SendInput {f2}
+WinClose, %A_Desktop%\tiktop1\bot.ahk
+WinClose, %A_Desktop%\tiktop\bot.ahk
 Run, https://tiktop-free.com/logout
 ErrorLevel = 1
 while ( ErrorLevel != 0 ) {

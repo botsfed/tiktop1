@@ -1,4 +1,5 @@
 ﻿CoordMode, ToolTip, Screen
+DetectHiddenWindows, On
 
 sr60()
 {
@@ -29,7 +30,8 @@ sr60()
 	  Sleep, 10000
 	}
 	if ( cheker == 2 ) {
-	  SendInput {f2}
+	  WinClose, %A_Desktop%\tiktop1\bot.ahk
+      WinClose, %A_Desktop%\tiktop\bot.ahk
 	  ErrorLevel = 1 
 	  while ( ErrorLevel != 0 ) {
 	    ImageSearch, FoundX, FoundY, 0,0, 1920, 1080, img\x.png
