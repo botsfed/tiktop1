@@ -58,7 +58,7 @@ sr60()
 	    FoundX += 15
 	    FoundY += 15
         Click %FoundX% %FoundY%
-		Sleep, 1500
+		Sleep, 2500
 		Run, bot.ahk
 		Sleep, 500
 		ErrorLevel = 1
