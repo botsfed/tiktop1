@@ -380,14 +380,16 @@ ErrorLevel = 1
 	{
 	  ImageSearch, FoundX, FoundY, 0,0, 1920, 1080, img\tikLogo.png
 	}
-	clipboard =
+	Clipboard =
 	Sleep, 800
 	Send ^l
 	Sleep, 400
-	Send ^c
-	Sleep, 400
+	While ( Clipboard == "" ) {
+	  Send ^c
+	  Sleep, 400
+	}
+    ClipWait ;
 	copiedText := Clipboard
-	ClipWait ;
 	Send ^w
 	Sleep, 500
     StringTrimRight, copiedText, Clipboard, 12
