@@ -372,10 +372,26 @@ ErrorLevel = 1
 	FileAppend, %spin%, data\infoBot.txt
 	if ( repeat != 1 ) {
 	Sleep, 1000
-	SetdefaultMouseSpeed, 15
+	SetdefaultMouseSpeed, 10
     Click %FoundX% %FoundY% 
 	SetdefaultMouseSpeed, 0
-	Sleep, 1000
+	ErrorLevel = 1
+	while ( ErrorLevel != 0 )
+	{
+	  ImageSearch, FoundX, FoundY, 0,0, 1920, 1080, img\tikLogo.png
+	}
+	clipboard =
+	Sleep, 800
+	Send ^l
+	Sleep, 400
+	Send ^c
+	Sleep, 400
+	copiedText := Clipboard
+	ClipWait ;
+	Send ^w
+	Sleep, 500
+    StringTrimRight, copiedText, Clipboard, 12
+	Run, %copiedText%
 	ErrorLevel = 1
 	while ( ErrorLevel != 0 )
 	{
@@ -396,7 +412,7 @@ ErrorLevel = 1
 		}
 	  }
 	  if ( ErrorLevel == 1 ) {
-	    ImageSearch, FoundX, FoundY, 0, 0, 625, 300, img\subBut1.png
+	    ImageSearch, FoundX, FoundY, 0, 0, 1920, 1080, img\subBut1.png
 		if ( ErrorLevel == 0 ) {
 		  FoundX = 50
 		  FoundY += 30
@@ -440,7 +456,7 @@ ErrorLevel = 1
 	Sleep, 1000
     Click %FoundX% %FoundY% 
 	Sleep, 2500
-	Send !{f4}
+	Send ^w
 	Sleep, 1000
 	ErrorLevel = 1
 	if ( checkBad == 3 ) {
@@ -462,7 +478,7 @@ ErrorLevel = 1
 	{
       ImageSearch, FoundX, FoundY, 775, 240, 1920, 1080, img\subBut2.png
 	  cheker++
-	  if ( cheker == 15 ) {
+	  if ( cheker == 3 ) {
 	    FoundX = 0
 		FoundY = 500
 		ErrorLevel = 0
