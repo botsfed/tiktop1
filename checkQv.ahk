@@ -6,7 +6,7 @@ sr60()
 {
   cheker = 0
   Loop {
-    Sleep, 100
+    Sleep, 400
     ImageSearch, FoundX, FoundY, 0,0, 1920, 1080, img\0CW.png
 	if ( ErrorLevel == 0 ) {
 	  cheker = 0

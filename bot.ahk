@@ -252,7 +252,7 @@ ErrorLevel = 1
 		if ( ErrorLevel == 0 ) {
 		  MouseMove ,0 , 405
 		  repeat = 1
-		  Sleep, 50000
+		  Sleep, 80000
 		}
 	  }
 	  if ( ErrorLevel != 0 ) {
@@ -401,6 +401,7 @@ ErrorLevel = 1
 	{
       ImageSearch, FoundX, FoundY, 0,0, 1920, 1080, img\subBut.png
 	  if ( ErrorLevel == 0 ) {
+	    Sleep, 4000
 		checkBad = 0
 	  }
 	  if ( ErrorLevel == 1 ) {
@@ -436,7 +437,7 @@ ErrorLevel = 1
     Click %FoundX% %FoundY% 
 	Sleep, 2500
 	Send !{Left}
-	Sleep, 2500
+	Sleep, 3500
 	color1 = 0
 	PixelGetColor, color1, 970, 370
 	if ( color != color1 ) {
@@ -479,6 +480,7 @@ ErrorLevel = 1
 	Sleep, 2000
 	Sleep, 500
 	MouseMove ,0 ,325
+	Sleep, 10000
   }  
   }
 }
