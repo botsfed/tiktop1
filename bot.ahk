@@ -1,7 +1,9 @@
 ﻿CoordMode, ToolTip, Screen
+SetBatchLines, 20ms
 
 f1:: 
 {
+Process, priority, chrome.exe, High
 FileReadLine, Green, data\infoLogin.txt, 1
 FileReadLine, Orange, data\infoLogin.txt, 2
 FileReadLine, Red, data\infoLogin.txt, 3
@@ -88,15 +90,18 @@ ErrorLevel = 1
 	  }
 	  ErrorLevel = 1
 	  cheker = 0
+	  cheker1 = 0
 	  if ( accN == 1 ) {
 	    while ( ErrorLevel != 0 ) {
 		  ImageSearch, FoundX, FoundY, 0,0, 1920, 1080, img\2acc.png
 		  cheker++
-		  if ( cheker == 30 ) {
+		  if ( cheker == 5 ) {
+		    cheker = 0
 			Send {PgDn}
 			Sleep, 1000
+			cheker1++
 		  }
-		  if ( cheker > 60 ) {
+		  if ( cheker1 == 3 ) {
 		    cheker = 0
 		    ErrorLevel = 1 
 			while ( ErrorLevel != 0 ) {
@@ -118,11 +123,13 @@ ErrorLevel = 1
 	    while ( ErrorLevel != 0 ) {
 		  ImageSearch, FoundX, FoundY, 0,0, 1920, 1080, img\3acc.png
 		  cheker++
-		  if ( cheker == 30 ) {
+		  if ( cheker == 5 ) {
+		    cheker = 0
 			Send {PgDn}
 			Sleep, 1000
+			cheker1++
 		  }
-		  if ( cheker > 60 ) {
+		  if ( cheker1 == 3 ) {
 		    cheker = 0
 		    ErrorLevel = 1 
 			while ( ErrorLevel != 0 ) {
@@ -132,6 +139,7 @@ ErrorLevel = 1
 	        FoundX += 10
 	        FoundY += 10
 	        Click %FoundX% %FoundY%
+			Sleep, 2000
 		  }
 		}
 		ErrorLevel = 1
@@ -143,11 +151,13 @@ ErrorLevel = 1
 	    while ( ErrorLevel != 0 ) {
 		  ImageSearch, FoundX, FoundY, 0,0, 1920, 1080, img\6acc1.png
 		  cheker++
-		  if ( cheker == 30 ) {
+		  if ( cheker == 5 ) {
+		    cheker = 0
 			Send {PgDn}
 			Sleep, 1000
+			cheker1++
 		  }
-		  if ( cheker > 60 ) {
+		  if ( cheker1 == 3 ) {
 		    cheker = 0
 		    ErrorLevel = 1 
 			while ( ErrorLevel != 0 ) {
@@ -157,6 +167,7 @@ ErrorLevel = 1
 	        FoundX += 10
 	        FoundY += 10
 	        Click %FoundX% %FoundY%
+			Sleep, 2000
 		  }
 		}
 		ErrorLevel = 1
@@ -168,11 +179,13 @@ ErrorLevel = 1
 	    while ( ErrorLevel != 0 ) {
 		  ImageSearch, FoundX, FoundY, 0,0, 1920, 1080, img\7acc.png
 		  cheker++
-		  if ( cheker == 30 ) {
+		  if ( cheker == 5 ) {
+		    cheker = 0
 			Send {PgDn}
 			Sleep, 1000
+			cheker1++
 		  }
-		  if ( cheker > 60 ) {
+		  if ( cheker1 == 3 ) {
 		    cheker = 0
 		    ErrorLevel = 1 
 			while ( ErrorLevel != 0 ) {
@@ -182,6 +195,7 @@ ErrorLevel = 1
 	        FoundX += 10
 	        FoundY += 10
 	        Click %FoundX% %FoundY%
+			Sleep, 2000
 		  }
 		}
 		ErrorLevel = 1
@@ -193,11 +207,13 @@ ErrorLevel = 1
 	    while ( ErrorLevel != 0 ) {
 		  ImageSearch, FoundX, FoundY, 0,0, 1920, 1080, img\1acc.png
 		  cheker++
-		  if ( cheker == 30 ) {
+		 if ( cheker == 5 ) {
+		    cheker = 0
 			Send {PgDn}
 			Sleep, 1000
+			cheker1++
 		  }
-		  if ( cheker > 60 ) {
+		  if ( cheker1 == 3 ) {
 		    cheker = 0
 		    ErrorLevel = 1 
 			while ( ErrorLevel != 0 ) {
@@ -207,6 +223,7 @@ ErrorLevel = 1
 	        FoundX += 10
 	        FoundY += 10
 	        Click %FoundX% %FoundY%
+			Sleep, 2000
 		  }
 		}
 		ErrorLevel = 1
@@ -226,7 +243,6 @@ ErrorLevel = 1
 	  Click %FoundX% %FoundY%
 	  Sleep, 200
 	  Click %FoundX% %FoundY%
-	  Send {PgUp}
 	  Sleep, 1000
 	  ErrorLevel = 1
 	while ( ErrorLevel != 0 )
@@ -354,15 +370,18 @@ ErrorLevel = 1
     ErrorLevel = 1
 	while ( ErrorLevel != 0 )
 	{
-      ImageSearch, FoundX, FoundY, 0,0, 1920, 1080, img\goCW.png
-	  if ( ErrorLevel == 0 ) {
-	    spin++
-	    FoundX += 60
+      ImageSearch, FoundX, FoundY, 775, 240, 1920, 1080, img\subBut2.png
+      if ( ErrorLevel == 0 ) {
+        ImageSearch, FoundX, FoundY, 0,0, 1920, 1080, img\goCW.png
+	    if ( ErrorLevel == 0 ) {
+	      spin++
+	      FoundX += 60
+	    }
 	  }
 	  if ( ErrorLevel == 1 ) {
 	    ImageSearch, FoundX, FoundY, 0,0, 1920, 1080, img\0CW.png
 		if ( ErrorLevel == 0 ) {
-		  MouseMove ,0 , 405
+		  MouseMove ,0 , 455
 		  spin = 5
 		  repeat = 1
 		}
@@ -371,34 +390,11 @@ ErrorLevel = 1
 	FileDelete, data\infoBot.txt
 	FileAppend, %spin%, data\infoBot.txt
 	if ( repeat != 1 ) {
+	PixelGetColor, color, 970, 370
 	Sleep, 1000
 	SetdefaultMouseSpeed, 10
     Click %FoundX% %FoundY% 
 	SetdefaultMouseSpeed, 0
-	ErrorLevel = 1
-	while ( ErrorLevel != 0 )
-	{
-	  ImageSearch, FoundX, FoundY, 0,0, 1920, 1080, img\tikLogo.png
-	}
-	Clipboard =
-	Sleep, 800
-	Send ^l
-	Sleep, 400
-	While ( Clipboard == "" ) {
-	  Send ^c
-	  Sleep, 400
-	}
-    ClipWait ;
-	copiedText := Clipboard
-	Send ^w
-	Sleep, 500
-    StringTrimRight, copiedText, Clipboard, 12
-	Run, %copiedText%
-	ErrorLevel = 1
-	while ( ErrorLevel != 0 )
-	{
-	  ImageSearch, FoundX, FoundY, 0,0, 1920, 1080, img\tikLogo.png
-	}
 	cheker = 0
 	ErrorLevel = 1
 	while ( ErrorLevel != 0 )
@@ -421,45 +417,35 @@ ErrorLevel = 1
 		  checkBad++
 		}
 	  }
-	  if ( ErrorLevel == 1 ) {
-	    while ( ErrorLevel != 0 ) {
-	      ImageSearch, FoundX, FoundY, 0,0, 1920, 1080, img\tikLogo.png
-		}
-	    ImageSearch, FoundX, FoundY, 0,0, 1920, 1080, img\likeBut.png
-		if ( ErrorLevel == 1 ) {
-		  ImageSearch, FoundX, FoundY, 0,0, 1920, 1080, img\likeBut2.png
-		}
-		if ( ErrorLevel == 0 ) {
-		  checkBad = 0
-		} 
-		if ( ErrorLevel == 1 ) {
-		  ImageSearch, FoundX, FoundY, 0,0, 1920, 1080, img\likeBut1.png
-		  if ( ErrorLevel == 1 ) {
-		    ImageSearch, FoundX, FoundY, 0,0, 1920, 1080, img\likeBut22.png
-		  }
-		  if ( ErrorLevel == 0 ) {
-		    FoundX = 50
-			FoundY = 50
-			checkBad++
-		  } else {
 		  cheker++
-			if ( cheker == 8 ) {
-			  cheker = 0
-			  FoundX = 50
-			  FoundY = 50
-			  ErrorLevel = 0 
-			}
+		  if ( cheker == 10 ) {
+			cheker = 0
+			Click 830 330 
+			Sleep, 200
+			Click 830 330 
+			Sleep, 1000
+			FoundX = 150
+			FoundY = 150
+			ErrorLevel = 0 
 		  }
-		}
-	  }
+		  Sleep, 1000
 	}
 	FoundX += 15
 	FoundY += 15
 	Sleep, 1000
     Click %FoundX% %FoundY% 
 	Sleep, 2500
-	Send ^w
-	Sleep, 1000
+	Send !{Left}
+	Sleep, 2500
+	color1 = 0
+	PixelGetColor, color1, 970, 370
+	if ( color != color1 ) {
+	  SendInput {f5}
+	}
+	color1 = 0
+	while ( color != color1 ) {
+	  PixelGetColor, color1, 970, 370
+	}
 	ErrorLevel = 1
 	if ( checkBad == 3 ) {
 	  checkBad = 0
@@ -480,15 +466,17 @@ ErrorLevel = 1
 	{
       ImageSearch, FoundX, FoundY, 775, 240, 1920, 1080, img\subBut2.png
 	  cheker++
-	  if ( cheker == 3 ) {
+	  if ( cheker == 10 ) {
 	    FoundX = 0
 		FoundY = 500
 		ErrorLevel = 0
 	  }
 	}
-	Sleep, 1000
+	Sleep, 2000
+	SetdefaultMouseSpeed, 10
     Click %FoundX% %FoundY% 
-	Sleep, 1000
+	SetdefaultMouseSpeed, 0
+	Sleep, 2000
 	Sleep, 500
 	MouseMove ,0 ,325
   }  

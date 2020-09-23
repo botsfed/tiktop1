@@ -1,5 +1,6 @@
 ﻿CoordMode, ToolTip, Screen
 DetectHiddenWindows, On
+SetBatchLines, 10ms
 
 sr60()
 {
@@ -46,9 +47,12 @@ sr60()
 			FoundX = 0
 			FoundY = 300
 		  } else {
-			ImageSearch, FoundX, FoundY, 0,0, 1920, 1080, img\tikLogo.png
+			ImageSearch, FoundX, FoundY, 0,0, 1920, 1080, img\subBut.png
+			If ( ErrorLevel == 1 ) {
+			  ImageSearch, FoundX, FoundY, 0,0, 1920, 1080, img\subBut1.png
+			}
 			if ( ErrorLevel == 0 ) {
-			  Send !{f4}
+			  Send #{Left}
 		      ErrorLevel == 1 
 			}
 		  }
@@ -68,7 +72,10 @@ sr60()
 		  if ( ErrorLevel == 1 ) {
 		    ImageSearch, FoundX, FoundY, 0,0, 1920, 1080, img\0CW.png
 			if ( ErrorLevel == 1 ) {
-			  ImageSearch, FoundX, FoundY, 0,0, 1920, 1080, img\tikLogo.png
+			  ImageSearch, FoundX, FoundY, 0,0, 1920, 1080, img\subBut.png
+			  If ( ErrorLevel == 1 ) {
+			    ImageSearch, FoundX, FoundY, 0,0, 1920, 1080, img\subBut1.png
+			  }
 			  if ( ErrorLevel == 0 ) {
 			    Send !{f4}
 				ErrorLevel == 1 

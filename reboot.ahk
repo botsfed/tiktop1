@@ -113,6 +113,10 @@ while ( ErrorLevel != 0 ) {
     Send ^w
   }
 }
+Sleep, 2000
+Send ^+I
+Sleep, 2000
+Send #{Down}
 ErrorLevel = 1
 	  while ( ErrorLevel != 0 ) {
 	    ImageSearch, FoundX, FoundY, 0, 0, 1920, 1080, img\checkChekAcc.png
@@ -123,11 +127,13 @@ ErrorLevel = 1
 	    while ( ErrorLevel != 0 ) {
 		  ImageSearch, FoundX, FoundY, 0,0, 1920, 1080, img\2acc.png
 		  cheker++
-		  if ( cheker == 30 ) {
+		  if ( cheker == 5 ) {
+		    cheker = 0
 			Send {PgDn}
 			Sleep, 1000
+			cheker1++
 		  }
-		  if ( cheker > 60 ) {
+		  if ( cheker1 == 3 ) {
 		    cheker = 0
 		    ErrorLevel = 1 
 			while ( ErrorLevel != 0 ) {
@@ -149,11 +155,13 @@ ErrorLevel = 1
 	    while ( ErrorLevel != 0 ) {
 		  ImageSearch, FoundX, FoundY, 0,0, 1920, 1080, img\3acc.png
 		  cheker++
-		  if ( cheker == 30 ) {
+		  if ( cheker == 5 ) {
+		    cheker = 0
 			Send {PgDn}
 			Sleep, 1000
+			cheker1++
 		  }
-		  if ( cheker > 60 ) {
+		  if ( cheker1 == 3 ) {
 		    cheker = 0
 		    ErrorLevel = 1 
 			while ( ErrorLevel != 0 ) {
@@ -163,6 +171,7 @@ ErrorLevel = 1
 	        FoundX += 10
 	        FoundY += 10
 	        Click %FoundX% %FoundY%
+			Sleep, 2000
 		  }
 		}
 		ErrorLevel = 1
@@ -174,11 +183,13 @@ ErrorLevel = 1
 	    while ( ErrorLevel != 0 ) {
 		  ImageSearch, FoundX, FoundY, 0,0, 1920, 1080, img\6acc1.png
 		  cheker++
-		  if ( cheker == 30 ) {
+		  if ( cheker == 5 ) {
+		    cheker = 0
 			Send {PgDn}
 			Sleep, 1000
+			cheker1++
 		  }
-		  if ( cheker > 60 ) {
+		  if ( cheker1 == 3 ) {
 		    cheker = 0
 		    ErrorLevel = 1 
 			while ( ErrorLevel != 0 ) {
@@ -188,6 +199,7 @@ ErrorLevel = 1
 	        FoundX += 10
 	        FoundY += 10
 	        Click %FoundX% %FoundY%
+			Sleep, 2000
 		  }
 		}
 		ErrorLevel = 1
@@ -199,11 +211,13 @@ ErrorLevel = 1
 	    while ( ErrorLevel != 0 ) {
 		  ImageSearch, FoundX, FoundY, 0,0, 1920, 1080, img\7acc.png
 		  cheker++
-		  if ( cheker == 30 ) {
+		  if ( cheker == 5 ) {
+		    cheker = 0
 			Send {PgDn}
 			Sleep, 1000
+			cheker1++
 		  }
-		  if ( cheker > 60 ) {
+		  if ( cheker1 == 3 ) {
 		    cheker = 0
 		    ErrorLevel = 1 
 			while ( ErrorLevel != 0 ) {
@@ -213,6 +227,7 @@ ErrorLevel = 1
 	        FoundX += 10
 	        FoundY += 10
 	        Click %FoundX% %FoundY%
+			Sleep, 2000
 		  }
 		}
 		ErrorLevel = 1
@@ -224,11 +239,13 @@ ErrorLevel = 1
 	    while ( ErrorLevel != 0 ) {
 		  ImageSearch, FoundX, FoundY, 0,0, 1920, 1080, img\1acc.png
 		  cheker++
-		  if ( cheker == 30 ) {
+		 if ( cheker == 5 ) {
+		    cheker = 0
 			Send {PgDn}
 			Sleep, 1000
+			cheker1++
 		  }
-		  if ( cheker > 60 ) {
+		  if ( cheker1 == 3 ) {
 		    cheker = 0
 		    ErrorLevel = 1 
 			while ( ErrorLevel != 0 ) {
@@ -238,6 +255,7 @@ ErrorLevel = 1
 	        FoundX += 10
 	        FoundY += 10
 	        Click %FoundX% %FoundY%
+			Sleep, 2000
 		  }
 		}
 		ErrorLevel = 1
@@ -257,7 +275,6 @@ ErrorLevel = 1
 	  Click %FoundX% %FoundY%
 	  Sleep, 200
 	  Click %FoundX% %FoundY%
-	  Send {PgUp}
 	  Sleep, 1000
       Run, bot.ahk
 	  Sleep, 2000
