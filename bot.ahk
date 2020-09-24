@@ -252,7 +252,7 @@ ErrorLevel = 1
 		if ( ErrorLevel == 0 ) {
 		  MouseMove ,0 , 405
 		  repeat = 1
-		  Sleep, 80000
+		  Sleep, 90000
 		}
 	  }
 	  if ( ErrorLevel != 0 ) {
@@ -437,15 +437,24 @@ ErrorLevel = 1
     Click %FoundX% %FoundY% 
 	Sleep, 2500
 	Send !{Left}
-	Sleep, 3500
+	ErrorLevel = 1
+	while ( ErrorLevel != 0 ) {
+	  ImageSearch, FoundX, FoundY, 0, 0, 1920, 1080, img\tikTopSwap.png
+	}
+	Sleep, 1500
 	color1 = 0
 	PixelGetColor, color1, 970, 370
 	if ( color != color1 ) {
 	  SendInput {f5}
 	}
 	color1 = 0
+	cheker = 0
 	while ( color != color1 ) {
 	  PixelGetColor, color1, 970, 370
+	  cheker++
+	  if ( cheker == 60 ) {
+	    color = %color1%
+	  }
 	}
 	ErrorLevel = 1
 	if ( checkBad == 3 ) {
