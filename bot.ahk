@@ -375,7 +375,7 @@ ErrorLevel = 1
         ImageSearch, FoundX, FoundY, 0,0, 1920, 1080, img\goCW.png
 	    if ( ErrorLevel == 0 ) {
 	      spin++
-	      FoundX += 60
+	      
 	    }
 	  }
 	  if ( ErrorLevel == 1 ) {
