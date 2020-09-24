@@ -401,7 +401,7 @@ ErrorLevel = 1
 	{
       ImageSearch, FoundX, FoundY, 0,0, 1920, 1080, img\subBut.png
 	  if ( ErrorLevel == 0 ) {
-	    Sleep, 4000
+	    Sleep, 5000
 		checkBad = 0
 	  }
 	  if ( ErrorLevel == 1 ) {
@@ -489,7 +489,7 @@ ErrorLevel = 1
 	Sleep, 2000
 	Sleep, 500
 	MouseMove ,0 ,325
-	Sleep, 10000
+	Sleep, 15000
   }  
   }
 }
