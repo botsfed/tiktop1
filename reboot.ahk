@@ -269,7 +269,7 @@ ErrorLevel = 1
 	  if ( FoundX1 < FoundX ) {
 		FoundX = %FoundX1%
 	  }
-	  FoundX += 8
+	  FoundX -= 15
 	  FoundY += 100
 	  Sleep, 2500
 	  Click %FoundX% %FoundY%
