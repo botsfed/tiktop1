@@ -111,6 +111,13 @@ sr60()
 	    Click
 	  }
 	}
+	ImageSearch, FoundX, FoundY, 0,0, 1920, 1080, ctrImg\err502.png
+	if ( ErrorLevel == 0 ) {
+	  Sleep, 1000
+	  FoundX += 8
+	  FoundY += 8
+	  Click %FoundX% %FoundY% 
+	}
   }
 }
 
