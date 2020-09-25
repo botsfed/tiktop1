@@ -65,7 +65,7 @@ cheker = 0
 	    chekMail = 0
 	    cheker = 0
 	  }
-	  if ( cheker == 110 ) {
+	  if ( cheker == 150 ) {
 	    chekMail++
 	    cheker = 0
 		if ( chekMail == 1 ) {
