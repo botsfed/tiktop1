@@ -99,6 +99,9 @@ sr60()
 		while ( ErrorLevel != 0 )
 	    {
           ImageSearch, FoundX, FoundY, 0, 0, 1920, 1080, img\subBut2.png
+		  If ( ErrorLevel == 1 ) {
+		    ImageSearch, FoundX, FoundY, 0, 0, 1920, 1080, img\ctrImg\errSubBut.png
+		  }
 		}
 		Sleep, 10000
         Click %FoundX% %FoundY% 
