@@ -114,7 +114,7 @@ sr60()
 	    Click
 	  }
 	}
-	ImageSearch, FoundX, FoundY, 0,0, 1920, 1080, ctrImg\err502.png
+	ImageSearch, FoundX, FoundY, 0,0, 1920, 1080, ctrImg\Xtiktok.png
 	if ( ErrorLevel == 0 ) {
 	  Sleep, 1000
 	  FoundX += 8
