@@ -465,6 +465,7 @@ ErrorLevel = 1
 			FoundY += 15
 			Sleep, 1000
 			Click %FoundX% %FoundY%
+			Sleep, 1500
 		  }
 		  if ( ErrorLevel == 1 ) {
 		    ImageSearch, FoundX, FoundY, 0,0, 1920, 1080, img\subButBig1.png
