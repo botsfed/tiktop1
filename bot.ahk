@@ -397,12 +397,14 @@ ErrorLevel = 1
 	SetdefaultMouseSpeed, 0
 	cheker = 0
 	ErrorLevel = 1
+	subCheck = 0
 	while ( ErrorLevel != 0 )
 	{
       ImageSearch, FoundX, FoundY, 0,0, 1920, 1080, img\subBut.png
 	  if ( ErrorLevel == 0 ) {
 	    Sleep, 5000
 		checkBad = 0
+		subCheck = 1
 	  }
 	  if ( ErrorLevel == 1 ) {
 	    ImageSearch, FoundX, FoundY, 0,0, 1920, 1080, img\subBut3.png
@@ -436,6 +438,41 @@ ErrorLevel = 1
 	Sleep, 1000
     Click %FoundX% %FoundY% 
 	Sleep, 2500
+	if ( subCheck == 1 ) {
+		Clipboard =
+	    Sleep, 800
+	    Send ^l
+	    Sleep, 400
+	    While ( Clipboard == "" ) {
+	      Send ^c
+	      Sleep, 400
+	    }
+        ClipWait ;
+	    copiedText := Clipboard
+        StringTrimRight, copiedText, Clipboard, 12
+	    Run, %copiedText%
+	    ErrorLevel = 1
+	    while ( ErrorLevel != 0 )
+	    {
+	      ImageSearch, FoundX, FoundY, 0,0, 1920, 1080, img\tikLogo.png
+	    }
+		ErrorLevel = 1
+	    while ( ErrorLevel != 0 )
+	    {
+	      ImageSearch, FoundX, FoundY, 0,0, 1920, 1080, img\subButBig.png
+		  if ( ErrorLevel == 0 ) {
+		    FoundX += 15
+			FoundY += 15
+			Sleep, 1000
+			Click %FoundX% %FoundY%
+		  }
+		  if ( ErrorLevel == 1 ) {
+		    ImageSearch, FoundX, FoundY, 0,0, 1920, 1080, img\subButBig1.png
+		  }
+	    }
+	}
+	Send ^w
+	Sleep, 1500
 	Send !{Left}
 	ErrorLevel = 1
 	while ( ErrorLevel != 0 ) {
