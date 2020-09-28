@@ -471,9 +471,10 @@ ErrorLevel = 1
 		    ImageSearch, FoundX, FoundY, 0,0, 1920, 1080, img\subButBig1.png
 		  }
 	    }
+	  Send ^w
+	  Sleep, 1500
 	}
-	Send ^w
-	Sleep, 1500
+
 	Send !{Left}
 	ErrorLevel = 1
 	while ( ErrorLevel != 0 ) {

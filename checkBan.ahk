@@ -29,9 +29,9 @@ sr60()
 		  }
 		  cheker++
 		  if ( cheker == 10 ) {
-		    ErrorLevel = 0 
-		    Sleep, 1000
+		    ErrorLevel = 0
 		  }
+		  Sleep, 1000
 		}
 		N++
 		Send ^w
