@@ -10,6 +10,14 @@ sr60()
 	if ( ErrorLevel == 1 ) {
 	  ImageSearch, FoundX, FoundY, 0,0, 1920, 1080, ctrImg\banAcc1.png
 	}
+	if ( ErrorLevel == 0 ) {
+	  Send {f5}
+	  Sleep, 15000
+	  ImageSearch, FoundX, FoundY, 0,0, 1920, 1080, ctrImg\banAcc.png
+	  if ( ErrorLevel == 1 ) {
+	    ImageSearch, FoundX, FoundY, 0,0, 1920, 1080, ctrImg\banAcc1.png
+	  }
+	}
 	If ( ErrorLevel == 0 ) {
 	  N = 1
 	  accName = ACC BAN : 
