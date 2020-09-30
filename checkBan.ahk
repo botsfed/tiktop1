@@ -19,6 +19,7 @@ sr60()
 	  }
 	}
 	If ( ErrorLevel == 0 ) {
+	  SendInput {f2}
 	  N = 1
 	  accName = ACC BAN : 
 	  Loop, 5 {

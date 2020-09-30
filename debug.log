@@ -1,0 +1,3 @@
+[0929/132244.348:ERROR:process_reader_win.cc(151)] SuspendThread: Отказано в доступе. (0x5)
+[0929/132244.379:ERROR:exception_snapshot_win.cc(99)] thread ID 872 not found in process
+[0929/135349.846:ERROR:file_io.cc(135)] WriteFile: Идет закрытие канала. (0xE8)
