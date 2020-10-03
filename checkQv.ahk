@@ -12,6 +12,9 @@ sr60()
 	  cheker = 0
 	}
     ImageSearch, FoundX, FoundY, 0,0, 1920, 1080, ctrImg\errQv.png
+	If ( ErrorLevel == 1 ) {
+	  ImageSearch, FoundX, FoundY, 0,0, 1920, 1080, ctrImg\errQvNice.png
+	}
 	if ( ErrorLevel == 0 ) {
 	  cheker++
 	  if ( cheker != 2 ) {
@@ -26,6 +29,9 @@ sr60()
 	  }
 	}
 	ImageSearch, FoundX, FoundY, 0,0, 1920, 1080, ctrImg\goodQv.png
+	If ( ErrorLevel == 1 ) {
+	  ImageSearch, FoundX, FoundY, 0,0, 1920, 1080, ctrImg\goodQvNice.png
+	}
 	if ( ErrorLevel == 0 ) {
 	  cheker = 0
 	  Sleep, 10000
