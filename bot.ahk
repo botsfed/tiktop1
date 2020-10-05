@@ -491,9 +491,10 @@ ErrorLevel = 1
 	while ( color != color1 ) {
 	  PixelGetColor, color1, 970, 370
 	  cheker++
-	  if ( cheker == 60 ) {
+	  if ( cheker == 35 ) {
 	    color = %color1%
 	  }
+	  Sleep, 1000
 	}
 	ErrorLevel = 1
 	if ( checkBad == 3 ) {
