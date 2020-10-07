@@ -92,6 +92,9 @@ sr60()
 		SendInput {f1}
 	}
 	ImageSearch, FoundX, FoundY, 0,0, 1920, 1080, ctrImg\err502.png
+	if ( ErrorLevel == 1 ) {
+	  ImageSearch, FoundX, FoundY, 0,0, 1920, 1080, ctrImg\err502big.png
+	}
 	if ( ErrorLevel == 0 ) {
 	  Sleep, 10000
 	  SendInput {f5}
