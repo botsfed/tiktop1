@@ -98,6 +98,9 @@ sr60()
 	  Sleep, 30000
 	}
 	ImageSearch, FoundX, FoundY, 0,0, 1920, 1080, ctrImg\errServ.png
+	If ( ErrorLevel == 1 ) {
+	  ImageSearch, FoundX, FoundY, 0,0, 1920, 1080, ctrImg\errServNice.png
+	}
 	if ( ErrorLevel == 0 ) {
 	  MouseGetPos, MouseX, MouseY
 	  if ( MouseX < 10 ) {
