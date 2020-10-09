@@ -42,7 +42,7 @@ ErrorLevel = 1
 	  }
   Loop {
     if ( spin == 5 ) {
-	  Sleep, 900000
+	  Sleep, 90000
 	  accNold = %accN%
 	  repeat = 1
 	  spin = 0
