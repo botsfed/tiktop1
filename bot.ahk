@@ -42,7 +42,7 @@ ErrorLevel = 1
 	  }
   Loop {
     if ( spin == 5 ) {
-	  Sleep, 90000
+	  Sleep, 100000
 	  accNold = %accN%
 	  repeat = 1
 	  spin = 0
@@ -252,7 +252,7 @@ ErrorLevel = 1
 		if ( ErrorLevel == 0 ) {
 		  MouseMove ,0 , 405
 		  repeat = 1
-		  Sleep, 120000
+		  Sleep, 130000
 		}
 	  }
 	  if ( ErrorLevel != 0 ) {
@@ -488,11 +488,13 @@ ErrorLevel = 1
 	}
 	color1 = 0
 	cheker = 0
+	findQv = 0
 	while ( color != color1 ) {
 	  PixelGetColor, color1, 970, 370
 	  cheker++
 	  if ( cheker == 15 ) {
 	    color = %color1%
+		findQv = 1
 	  }
 	  Sleep, 1000
 	}
@@ -510,6 +512,7 @@ ErrorLevel = 1
 	  }
 	  }
 	}
+	if ( findQv == 0 ) {
 	ErrorLevel = 1
 	cheker = 0
 	while ( ErrorLevel != 0 )
@@ -527,6 +530,7 @@ ErrorLevel = 1
     Click %FoundX% %FoundY% 
 	SetdefaultMouseSpeed, 0
 	Sleep, 1000
+	}
 	MouseMove ,0 ,325
 	Sleep, 18000
   }  
