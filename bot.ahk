@@ -42,7 +42,7 @@ ErrorLevel = 1
 	  }
   Loop {
     if ( spin == 5 ) {
-	  Sleep, 100000
+	  Sleep, 900000
 	  accNold = %accN%
 	  repeat = 1
 	  spin = 0
@@ -239,7 +239,7 @@ ErrorLevel = 1
 	  }
 	  FoundX += 8
 	  FoundY += 100
-	  Sleep, 2500
+	  Sleep, 2000
 	  Click %FoundX% %FoundY%
 	  Sleep, 200
 	  Click %FoundX% %FoundY%
@@ -252,7 +252,7 @@ ErrorLevel = 1
 		if ( ErrorLevel == 0 ) {
 		  MouseMove ,0 , 405
 		  repeat = 1
-		  Sleep, 130000
+		  Sleep, 120000
 		}
 	  }
 	  if ( ErrorLevel != 0 ) {
@@ -402,7 +402,7 @@ ErrorLevel = 1
 	{
       ImageSearch, FoundX, FoundY, 0,0, 1920, 1080, img\subBut.png
 	  if ( ErrorLevel == 0 ) {
-	    Sleep, 5000
+	    Sleep, 3000
 		checkBad = 0
 		subCheck = 1
 	  }
@@ -491,7 +491,7 @@ ErrorLevel = 1
 	while ( color != color1 ) {
 	  PixelGetColor, color1, 970, 370
 	  cheker++
-	  if ( cheker == 35 ) {
+	  if ( cheker == 15 ) {
 	    color = %color1%
 	  }
 	  Sleep, 1000
@@ -522,14 +522,13 @@ ErrorLevel = 1
 		ErrorLevel = 0
 	  }
 	}
-	Sleep, 2000
+	Sleep, 1000
 	SetdefaultMouseSpeed, 10
     Click %FoundX% %FoundY% 
 	SetdefaultMouseSpeed, 0
-	Sleep, 2000
-	Sleep, 500
+	Sleep, 1000
 	MouseMove ,0 ,325
-	Sleep, 20000
+	Sleep, 18000
   }  
   }
 }
