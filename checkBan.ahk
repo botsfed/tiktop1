@@ -21,6 +21,7 @@ sr60()
 	If ( ErrorLevel == 0 ) {
 	  SendInput {f2}
 	  N = 1
+	  accNameTest = ACC BAN : 
 	  accName = ACC BAN : 
 	  Loop, 5 {
 	    FileReadLine, acc, data\infoLogin.txt, %N%
@@ -46,6 +47,7 @@ sr60()
 		Send ^w
 		Sleep, 1000
 	  }
+	  if ( accName != accNameTest ) {
 	  Run, www.e.mail.ru
 	  Sleep, 1000
 	  ErrorLevel = 1
@@ -82,6 +84,11 @@ sr60()
 	  Send ^w
 	  Sleep, 1000
 	  SendInput {f4}
+	  } else {
+	      SendInput {f15}
+		  Sleep, 1500
+		  Run, reboot.ahk
+	  }
 	}
   }
 }
