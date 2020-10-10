@@ -252,7 +252,7 @@ ErrorLevel = 1
 		if ( ErrorLevel == 0 ) {
 		  MouseMove ,0 , 405
 		  repeat = 1
-		  Sleep, 130000
+		  Sleep, 150000
 		}
 	  }
 	  if ( ErrorLevel != 0 ) {
@@ -532,7 +532,7 @@ ErrorLevel = 1
 	Sleep, 1000
 	}
 	MouseMove ,0 ,325
-	Sleep, 18000
+	Sleep, 20000
   }  
   }
 }
