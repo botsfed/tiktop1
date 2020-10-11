@@ -402,7 +402,7 @@ ErrorLevel = 1
 	{
       ImageSearch, FoundX, FoundY, 0,0, 1920, 1080, img\subBut.png
 	  if ( ErrorLevel == 0 ) {
-	    Sleep, 3000
+	    Sleep, 5000
 		checkBad = 0
 		subCheck = 1
 	  }
