@@ -421,7 +421,7 @@ ErrorLevel = 1
 		}
 	  }
 		  cheker++
-		  if ( cheker == 10 ) {
+		  if ( cheker == 15 ) {
 			cheker = 0
 			Click 830 330 
 			Sleep, 200
