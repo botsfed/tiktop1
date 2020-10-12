@@ -58,7 +58,7 @@ sr60()
 			  ImageSearch, FoundX, FoundY, 0,0, 1920, 1080, img\subBut1.png
 			}
 			if ( ErrorLevel == 0 ) {
-			  Send #{Left}
+			  Send !{Left}
 		      ErrorLevel == 1 
 			}
 		  }
@@ -83,7 +83,7 @@ sr60()
 			    ImageSearch, FoundX, FoundY, 0,0, 1920, 1080, img\subBut1.png
 			  }
 			  if ( ErrorLevel == 0 ) {
-			    Send #{Left}
+			    Send !{Left}
 				ErrorLevel == 1 
 			  }
 			}
