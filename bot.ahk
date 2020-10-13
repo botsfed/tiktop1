@@ -534,7 +534,7 @@ ErrorLevel = 1
 	Sleep, 1000
 	}
 	MouseMove ,0 ,325
-	Sleep, 24000
+	Sleep, 30000
   }  
   }
 }
