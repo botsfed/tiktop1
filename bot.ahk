@@ -421,8 +421,10 @@ ErrorLevel = 1
 		}
 	  }
 		  cheker++
-		  if ( cheker == 15 ) {
+		  if ( cheker == 10 ) {
 			cheker = 0
+			Click 835 530 
+			Sleep, 5000
 			Click 830 330 
 			Sleep, 200
 			Click 830 330 
@@ -532,7 +534,7 @@ ErrorLevel = 1
 	Sleep, 1000
 	}
 	MouseMove ,0 ,325
-	Sleep, 22000
+	Sleep, 24000
   }  
   }
 }
