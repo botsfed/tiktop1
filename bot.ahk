@@ -42,7 +42,7 @@ ErrorLevel = 1
 	  }
   Loop {
     if ( spin == 5 ) {
-	  Sleep, 110000
+	  Sleep, 90000
 	  accNold = %accN%
 	  repeat = 1
 	  spin = 0
@@ -252,7 +252,7 @@ ErrorLevel = 1
 		if ( ErrorLevel == 0 ) {
 		  MouseMove ,0 , 405
 		  repeat = 1
-		  Sleep, 150000
+		  Sleep, 120000
 		}
 	  }
 	  if ( ErrorLevel != 0 ) {
