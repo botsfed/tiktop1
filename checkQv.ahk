@@ -17,14 +17,14 @@ sr60()
 	}
 	if ( ErrorLevel == 0 ) {
 	  cheker++
-	  if ( cheker != 2 ) {
+	  if ( cheker != 1 ) {
 	    Sleep, 10000
 	  }
 	}
 	ImageSearch, FoundX, FoundY, 0,0, 1920, 1080, ctrImg\errQv2.png
 	if ( ErrorLevel == 0 ) {
 	  cheker++
-	  if ( cheker != 2 ) {
+	  if ( cheker != 1 ) {
 	    Sleep, 10000
 	  }
 	}
@@ -36,7 +36,7 @@ sr60()
 	  cheker = 0
 	  Sleep, 10000
 	}
-	if ( cheker == 2 ) {
+	if ( cheker == 1 ) {
 	  WinClose, %A_Desktop%\tiktop1\bot.ahk
       WinClose, %A_Desktop%\tiktop\bot.ahk
 	  ErrorLevel = 1 
@@ -89,6 +89,9 @@ sr60()
 			}
 		  }
 		}
+		Sleep, 35000
+	    SendInput {f5}
+	    Sleep, 15000
 		SendInput {f1}
 	}
 	ImageSearch, FoundX, FoundY, 0,0, 1920, 1080, ctrImg\err502.png
