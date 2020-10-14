@@ -545,9 +545,9 @@ ErrorLevel = 1
 	Sleep, 1000
 	}
 	MouseMove ,0 ,325
-	Sleep, 25000
+	Sleep, 35000
 	SendInput {f5}
-	Sleep, 25000
+	Sleep, 15000
   }  
   }
 }
