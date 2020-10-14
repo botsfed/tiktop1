@@ -286,6 +286,10 @@ ErrorLevel = 1
 		  Sleep, 2000
 		  Run, www.twitter.com/messages
 	  ErrorLevel = 1
+	  while ( ErrorLevel != 0 ) {
+	    ImageSearch, FoundX, FoundY, 0, 0, 1920, 1080, img\checkLoad.png
+	  }
+	  ErrorLevel = 1
 	  while ( ErrorLevel != 0 )
 	  {
         ImageSearch, FoundX, FoundY, 0,0, 1920, 1080, img\twitSwap1.png
@@ -324,8 +328,15 @@ ErrorLevel = 1
 	  Click %FoundX% %FoundY%
 	  Sleep, 1500
 	  ErrorLevel = 1
+	  cheker = 0
 	  while ( ErrorLevel != 0 ) {
 	    ImageSearch, FoundX, FoundY, 0, 0, 1920, 1080, img\checkLoad.png
+		cheker++
+		if ( cheker > 30 ) {
+		  cheker = 0
+		  SendInput {f5}
+		}
+		Sleep, 1000
 	  }
 	  Send ^w
 	  ErrorLevel = 1
