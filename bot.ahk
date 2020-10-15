@@ -544,6 +544,14 @@ ErrorLevel = 1
 	SetdefaultMouseSpeed, 0
 	Sleep, 1000
 	}
+	ErrorLevel = 1
+	while ( ErrorLevel != 0 )
+	{
+      ImageSearch, FoundX, FoundY, 775, 240, 1920, 1080, img\subBut2.png
+	  if ( ErrorLevel == 1 ) {
+	    ImageSearch, FoundX, FoundY, 0,0, 1920, 1080, img\0CW.png
+	  }
+	}
 	MouseMove ,0 ,325
 	Sleep, 35000
 	SendInput {f5}
