@@ -89,7 +89,7 @@ sr60()
 			}
 		  }
 		}
-		Sleep, 35000
+		Sleep, 45000
 	    SendInput {f5}
 	    Sleep, 15000
 		SendInput {f1}
